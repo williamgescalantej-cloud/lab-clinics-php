@@ -17,7 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Estilos personalizados del admin -->
-    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/admin.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/global.css">
 </head>
 <body>
     <!-- SIDEBAR -->

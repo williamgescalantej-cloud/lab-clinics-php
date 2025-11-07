@@ -11,8 +11,6 @@
  * @return string|false Nombre del archivo generado o false
  */
 function generarQR($medicoId, $size = 500) {
-    require_once __DIR__ . '/../config/db.php';
-    
     // URL del perfil médico
     $url = urlPerfilMedico($medicoId);
     

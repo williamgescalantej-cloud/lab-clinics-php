@@ -1,7 +1,9 @@
 <?php
-require_once '../config/db.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../../src/database/connection.php';
+require_once __DIR__ . '/../../src/lib/auth.php';
+require_once __DIR__ . '/../../src/lib/helpers.php';
+require_once __DIR__ . '/../../src/lib/validation.php';
+require_once __DIR__ . '/../../src/lib/medicos.php';
 
 requireLogin();
 
@@ -161,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include 'includes/layout-header.php';
+include __DIR__ . '/../../src/templates/admin-header.php';
 ?>
 
 <div class="page-header">
@@ -495,4 +497,4 @@ include 'includes/layout-header.php';
 
 <script src="<?php echo SITE_URL; ?>/assets/js/main.js"></script>
 
-<?php include 'includes/layout-footer.php'; ?>
+<?php include __DIR__ . '/../../src/templates/admin-footer.php'; ?>

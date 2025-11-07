@@ -1,7 +1,7 @@
 <?php
-require_once '../config/db.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../../src/database/connection.php';
+require_once __DIR__ . '/../../src/lib/auth.php';
+require_once __DIR__ . '/../../src/lib/helpers.php';
 
 requireLogin();
 
@@ -51,7 +51,7 @@ $stmt = $pdo->query("
 ");
 $medicosSinEscaneos = $stmt->fetchAll();
 
-include 'includes/layout-header.php';
+include __DIR__ . '/../../src/templates/admin-header.php';
 ?>
 
 <div class="page-header">
@@ -193,4 +193,4 @@ include 'includes/layout-header.php';
     </div>
 <?php endif; ?>
 
-<?php include 'includes/layout-footer.php'; ?>
+<?php include __DIR__ . '/../../src/templates/admin-footer.php'; ?>
