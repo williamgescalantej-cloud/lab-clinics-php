@@ -12,7 +12,7 @@ define('DB_PASS', ''); // Cambia si tienes contraseña en XAMPP/LAMPP
 define('DB_CHARSET', 'utf8mb4');
 
 // Configuración general del sitio
-define('SITE_URL', 'http://localhost/proyectos/labclinics');
+define('SITE_URL', 'http://localhost/proyectos/labclinics/public');
 define('SITE_NAME', 'LabClinics Connect');
 define('SITE_SHORT_NAME', 'LabClinics');
 define('SITE_VERSION', '1.0.0');
