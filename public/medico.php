@@ -1,12 +1,14 @@
 <?php
-require_once '../config/db.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../src/database/connection.php';
+require_once __DIR__ . '/../src/lib/helpers.php';
+require_once __DIR__ . '/../src/lib/medicos.php';
 
 $pdo = getConnection();
 $id = (int)($_GET['id'] ?? 0);
 
 if ($id <= 0) {
-    include 'includes/error-404.php';
+    http_response_code(404);
+    include __DIR__ . '/../src/templates/error-404.php';
     exit;
 }
 
@@ -21,7 +23,8 @@ $stmt->execute([$id]);
 $medico = $stmt->fetch();
 
 if (!$medico) {
-    include 'includes/error-404.php';
+    http_response_code(404);
+    include __DIR__ . '/../src/templates/error-404.php';
     exit;
 }
 

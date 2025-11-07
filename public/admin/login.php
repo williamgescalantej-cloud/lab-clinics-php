@@ -1,7 +1,7 @@
 <?php
-require_once '../config/db.php';
-require_once '../includes/auth.php';
-require_once '../includes/functions.php';
+require_once __DIR__ . '/../../src/database/connection.php';
+require_once __DIR__ . '/../../src/lib/auth.php';
+require_once __DIR__ . '/../../src/lib/helpers.php';
 
 redirectIfLogged();
 

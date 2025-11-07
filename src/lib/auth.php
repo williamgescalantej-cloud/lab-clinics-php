@@ -33,7 +33,8 @@ function getUserName() {
  * Verificar credenciales de login
  */
 function verificarLogin($email, $password) {
-    require_once __DIR__ . '/../config/db.php';
+    // La conexión a la BBDD se asume que ya está incluida,
+    // pero getConnection() la manejará de forma segura.
     $pdo = getConnection();
     
     try {
